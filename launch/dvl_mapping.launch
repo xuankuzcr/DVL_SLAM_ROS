@@ -18,7 +18,7 @@
 
 	<node pkg="rosbag" type="play" name="rosbag" args="-r 1.0 -s 1.0 $(arg bag_name)"/>
 
-	<node pkg="dvl_slam_modify" type="dvl_slam_modify" name="dvl_slam_modify" output="screen" />
+	<node pkg="DVL_SLAM_ROS" type="dvl_slam_modify" name="DVL_SLAM_ROS" output="screen" />
 
 	
 	<!-- <group if="$(arg rviz)">

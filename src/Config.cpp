@@ -8,7 +8,7 @@
 Config::Config()
 {
 
-  YAML::Node yamlFile = YAML::LoadFile("/home/chunran/dvl_ws/src/DVL-SLAM_reimplementation/yaml/defalut_param.yaml");
+  YAML::Node yamlFile = YAML::LoadFile("/home/chunran/dvl_ws/src/DVL_SLAM_ROS/yaml/defalut_param.yaml");
   ReadEveryParameter(yamlFile);
 }
 
