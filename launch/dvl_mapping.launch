@@ -1,0 +1,31 @@
+<launch>
+<!-- Launch file for Livox AVIA LiDAR -->
+
+	<arg name="rviz" default="true" />
+
+	<!-- <arg name="bag_name" value="/media/chunran/Chunran/rosbag/lxy/water_treatment_1.bag"/>   -->
+	<!-- <arg name="bag_name" value="/media/chunran/Chunran/rosbag/lxy/wall_3.bag"/>   -->
+	<arg name="bag_name" value="/media/chunran/Chunran/rosbag/20211015/new4.bag"/>
+	<!-- <arg name="bag_name" value="/media/chunran/Chunran/rosbag/mtr/new2.bag"/> -->
+	<!-- <arg name="bag_name" value="/home/xw/Bags/lidar-camera/new2.bag"/> -->
+
+	<!-- <arg name="bag_name" value="/media/chunran/Chunran/rosbag/20211015/new2.bag"/> -->
+
+
+    <!-- <arg name="bag_name" value="/media/chunran/Chunran/rosbag/lxy/r3live_zym_03.bag"/>  -->
+	<!-- <arg name="bag_name" value="/media/chunran/Chunran/rosbag/zqy/wall.bag"/>  -->
+	<node pkg="livox_mapping" type="livox_repub" name="livox_repub" output="screen" respawn="true"/>
+
+	<node pkg="rosbag" type="play" name="rosbag" args="-r 1.0 -s 1.0 $(arg bag_name)"/>
+
+	<node pkg="dvl_slam_modify" type="dvl_slam_modify" name="dvl_slam_modify" output="screen" />
+
+	
+	<!-- <group if="$(arg rviz)">
+		<node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find fast_lio)/rviz_cfg/loam_livox.rviz" />
+	</group> -->
+
+	<node pkg="image_transport" type="republish" name="republish" args="compressed in:=/left_camera/image raw out:=/left_camera/image" output="screen" respawn="true"/>
+
+launch-prefix="gdb -ex run --args"
+</launch> 	

@@ -1,0 +1,66 @@
+Dataset:
+  isKitti: true
+  isIndoor: false
+  useRos: false
+  imgDir: "/home/jongsik/temp_work/kitti2bag/2011_09_30/2011_09_30_drive_0020_sync/image_02/data_temp/"
+  lidarDir: "/home/jongsik/temp_work/kitti2bag/2011_09_30/2011_09_30_drive_0020_sync/velodyne_points/data_temp/"
+  visualize: false
+
+Camera:
+  fx: 707.0912
+  fy: 707.0912
+  cx: 601.8873
+  cy: 183.1104
+
+  k1: -3.792567e-01
+  k2: 2.121203e-01
+  k3: -7.605535e-02
+  p1: 9.182571e-04
+  p2: 1.911304e-03
+
+Extrinsic:
+  delX: -7.137748e-03
+  delY: -7.482656e-02
+  delZ: -3.336324e-01
+
+  r11: 7.027555e-03
+  r12: -9.999753e-01
+  r13: 2.599616e-05
+  r21: -2.254837e-03
+  r22: -4.184312e-05
+  r23: -9.999975e-01
+  r31: 9.999728e-01
+  r32: 7.027479e-03
+  r33: -2.255075e-03
+
+Rectifying:
+  R11: 9.999280e-01
+  R12: 8.085985e-03
+  R13: -8.866797e-03
+  R21: -8.123205e-03
+  R22: 9.999583e-01
+  R23: -4.169750e-03
+  R31: 8.832711e-03
+  R32: 4.241477e-03
+  R33: 9.999520e-01
+
+Image:
+  width: 1226
+  height: 370
+
+PointCloud:
+  minZ: 0.15
+  maxZ: 50.0
+
+Tracker:
+  imgPyramidMinLevel: 0
+  imgPyramidMaxLevel: 1
+  maxIteration: 100
+  normXThresForIteration: 0.0005
+  border: 6
+
+Logger:
+  voxelSize: 0.02
+
+System:
+  ratioThres: 0.5

@@ -1,0 +1,62 @@
+Dataset:
+  isKitti: false
+  isIndoor: true
+  useRos: true
+  visualize: false
+
+Camera:
+  fx: 730.617807179727
+  fy: 731.2502851701612
+  cx: 335.1539179332822
+  cy: 256.15500058538953
+  k1: -0.3370792140385211
+  k2: 0.12848011803681716
+  k3: 0.012402628238191207
+  p1: -0.001618208242720009
+  p2: 0.0008113530876134809
+
+Extrinsic:
+  delX: 0.0
+  delY: 0.0
+  delZ: -0.08
+  r11: 7.027555e-03
+  r12: -9.999753e-01
+  r13: 2.599616e-05
+  r21: -2.254837e-03
+  r22: -4.184312e-05
+  r23: -9.999975e-01
+  r31: 9.999728e-01
+  r32: 7.027479e-03
+  r33: -2.255075e-03
+
+Rectifying:
+  R11: 1.0
+  R12: 0.0
+  R13: 0.0
+  R21: 0.0
+  R22: 1.0
+  R23: 0.0
+  R31: 0.0
+  R32: 0.0
+  R33: 1.0
+
+Image:
+  width: 1226
+  height: 370
+
+PointCloud:
+  minZ: 0.15
+  maxZ: 50.0
+
+Tracker:
+  imgPyramidMinLevel: 0
+  imgPyramidMaxLevel: 1
+  maxIteration: 10
+  normXThresForIteration: 0.0005
+  border: 6
+
+Logger:
+  voxelSize: 0.03
+
+System:
+  ratioThres: 0.5
